@@ -1,22 +1,21 @@
 import './App.css';
 import React from 'react';
 import { Routes, Route} from 'react-router-dom';
-import home from './Components/Pages/home';
-import about from './Components/Pages/about';
+import AboutMe from './Components/Pages/AboutMe';
 import projets from './Components/Pages/projets';
 import contact from './Components/Pages/contact';
 import Error from './Components/Pages/Error';
 import NavBar from './Components/NavBar';
 
 function App() {
+
   return (
     <>
 
       <NavBar/>
 
       <Routes>
-        <Route exact path="/" Component={home}/>
-        <Route path="/about" Component={about}/>
+        <Route exact path="/" Component={AboutMe}/>
         <Route path="/projets" Component={projets}/>
         <Route path="/contact" Component={contact}/>
 

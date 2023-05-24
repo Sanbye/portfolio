@@ -8,8 +8,7 @@ const NavBar =()=>{
             <header className="header">
                 <div className="navbar-container">
                     <li>
-                        <NavLink to="/">Home</NavLink>
-                        <NavLink to="/about">about</NavLink>
+                        <NavLink to="/">About me</NavLink>
                         <NavLink to="/projets">Projets</NavLink>
                         <NavLink to="/contact">Contact</NavLink>
                         

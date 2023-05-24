@@ -2,24 +2,41 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: #284763;
+}
+
+body{
+  background-color: #a1cac8;
+  min-height: 100vh;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+.importantText{
+  color:  #d96511;
+  font-size: larger;
 }
 
 a, a:visited {
-   color:white;
+   color:#FFFDFA;
    text-decoration: none;
 }
 
 .header {
   list-style: none;
-  background-color: #282c34;
-  min-height: 15vh;
+  background-color: #284763;
+  min-height: 12vh;
   width: 100%;
   position: fixed;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #FFFDFA;
+  z-index: 100;
 }
 
 .navbar-container {
@@ -28,7 +45,7 @@ a, a:visited {
 
 .header li{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .header a{
@@ -36,7 +53,7 @@ a, a:visited {
 }
 
 .header a:hover, .header .active{
-  color: royalblue;
+  color: #a1cac8;
 }
 
 .header a::after{
@@ -45,7 +62,7 @@ a, a:visited {
   content: "";
   position: absolute;
   width: 100%;
-  height: 0.1rem;
+  height: 0.2rem;
   bottom: 0;
   left: 0;
 }
@@ -56,36 +73,175 @@ a, a:visited {
   content: "";
   position: absolute;
   width: 100%;
-  height: 0.1rem;
+  height: 0.2rem;
   bottom: 0;
   left: 0;
-  background-color: royalblue;
+  background-color: #a1cac8;
 }
 
-.heroBanner, .cover{
+.heroBanner{
   height: 100vh;
   width: 100%;
   object-fit: cover;
 }
 
 .cover{
-  margin-top: 15vh;
-}
-
-.heroBanner div{
-  background-color: #282c3404;
+  object-fit: contain;
+  height: 400px;
+  width: auto;
   position: absolute;
-  left: 10%;
+  right: 10%;
   top: 50%;
 }
 
+.heroBanner div{
+  position: absolute;
+  left: 5%;
+  top: 25%;
+  width: 60%;
+  font-size: 2rem;
+}
+
 .heroBannerImg{
+  height: 400px;
+  width: 400px;
 
 }
 
-.competences div{
-  background-color: #282c34;
+.skills{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills h1{
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.skill{
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.skillTitle{
+  width: 30%;
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  font-size: xx-large;
+
+}
+
+.graph{
+  position: relative;
+  height: 85px;
+  width: 70%;
+  border: #a1cac8 solid 10px;
+  border-radius: 66px;
+  background: linear-gradient(145deg, #91b6b4, #acd8d6);
+  box-shadow:  14px 14px 29px #89acaa,
+               -14px -14px 29px #b9e8e6;
+}
+
+.graph::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 66px;
+  box-shadow: inset 9px 9px 5px #89acaa,
+              inset -7px -7px 5px #b9e8e6;
+}
+
+.graphValue{
+  position: absolute;
+  border-radius: 66px;
+  z-index: 10;
+    top: 0px;
+    left: 0px;
+    height: 65px;
+    background: linear-gradient(145deg, #f0ad9c, #ca9283);
+    box-shadow:  7px 7px 10px #89acaa;
+
+}
+
+.skillSection{
+  width: 100%;
+  display: flex;
+
+}
+
+.howIwork{
+  width: 50%;
+  font-size: 2rem;
+  padding: 0 2rem 0 10%;
+}
+
+.techStack{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.techStack h1{
+  margin: 5rem;
+}
+
+.logos{
+  display: flex;
+  justify-content: center;
+  width: 850px;
+  flex-wrap: wrap;
+}
+
+.logoContainer{
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow:  7px 7px 10px #89acaa,
+               -7px -7px 10px #b9e8e6;
+}
+
+.logoContainer p{
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.logo{
+
+  height: 100px;
+  width: 100px;
+}
+
+.game{
+  position: relative;
+}
+
+.boardGame{
+  width: 1000px;
+  height: 1000px;
+  border: 1px solid black;
+}
+
+.ball{
+  position: absolute;
+  width: 20px;
   height: 20px;
+  border-radius: 50%;
+  background-color: #d96511;
 }
 
-
+.paddle{
+  position: absolute;
+  bottom: 0;
+  width: 100px;
+  height: 20px;
+  background-color: #d96511;
+}
