@@ -2,7 +2,8 @@ import React from 'react';
 import coffeeGIF from '../../Images/coffee-88.gif';
 import {Helmet} from 'react-helmet';
 import Skill from '../Skill';
-import Game from '../game/game';
+import Game from '../Game/Game';
+import photoSyl from '../../Images/photoSylvain.png'
 
 
 const AboutMe =()=>{
@@ -19,6 +20,7 @@ const AboutMe =()=>{
 
                     <p>Hi! I'm Sylvain Bousquet.</p>
                     <p>I'm a french <span className='importantText'>full-stack developer</span>, ready to take your project to the next level! If you're seeking a talented developer, I could be <span className='importantText'>the  perfect fit</span> for you.</p>
+                    <img src={photoSyl}></img>
                 
                 </div>
                 <img className='cover' src={coffeeGIF} alt='Coffee GIF'/>
@@ -29,8 +31,8 @@ const AboutMe =()=>{
                     <h1>Why me ?</h1>
                     <Skill title='Curiosity' value='100%'/>
                     <Skill title='Adaptability' value='90%'/>
-                    <Skill title='Creativity' value='80%'/>
-                    <Skill title='English' value='90%'/>
+                    <Skill title='Creativity' value='90%'/>
+                    <Skill title='English' value='80%'/>
                     <Skill title='Motivation' value='100%'/>
                 </div>
                 <div className='howIwork'>
@@ -51,7 +53,7 @@ const AboutMe =()=>{
 
             <section className='techStack'>
 
-                <h1>My Toolbox : </h1>
+                <h1 className='myToolBox'>My Toolbox : </h1>
 
                 <Game/>
                 

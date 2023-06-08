@@ -9,8 +9,8 @@ const NavBar =()=>{
                 <div className="navbar-container">
                     <li>
                         <NavLink to="/">About me</NavLink>
-                        <NavLink to="/projets">Projets</NavLink>
-                        <NavLink to="/contact">Contact</NavLink>
+                        <NavLink to="/Projects">Projects</NavLink>
+                        <NavLink to="/Contact">Contact</NavLink>
                         
                     </li>
                 </div>
