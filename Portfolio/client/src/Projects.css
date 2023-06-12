@@ -1,35 +1,61 @@
+html{
+    scroll-behavior: smooth;
+}
+
 .projectsContainer{
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-
-    padding-top: 20vh;
-    height: 100vh;
-    width: 100vw;
+    gap: 2rem;
+    padding-top: 15vh;
+    padding-bottom: 10vh;
+    left: 10vw;
+    min-height: 100vh;
+    width: 80vw;
 }
 
 .projectCard{
     position: relative;
-    height: 540px;
-    width: 960px;
-    margin: 2rem;
-    overflow: hidden;
-    background-color: var(--darkBlue);
-    border: solid 2px var(--lightBlue);
-    box-shadow:  7px 7px 10px var(--shadow),
-    -7px -7px 10px var(--light);
-    transition: all 3s ease;
+    max-height: 80vh;
+    box-shadow:  2px 2px 8px rgba(0, 0, 0, 0.5);
+    transition: flex 1s ease;
 }
 
-.projectCard img{
+.projectCard.bigger{
+    flex:2 1 30vw;
+}
+
+.projectCard.smaller{
+    flex:1 2 30vw;
+}
+
+.projectCard:hover{
+    flex: 4 1 42vw;
+    transition: flex 1s ease;
+}
+
+.imgContainer{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    transition: height 1s ease;
+}
+
+.cardCover{
     object-fit: cover;
-    object-position: center;
+    object-position: left;
     height: 100%;
     width: 100%;
 }
 
-.cardTextContainer{
+.cardLogo{
+    height: 50px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.cardTitleContainer{
     position: absolute;
     display: flex;
     justify-content: flex-end;
@@ -55,7 +81,98 @@
 
 }
 
-.cardTextContainer h1, .cardTextContainer div{
+.cardTitleContainer h1, .cardTitleContainer div{
+    text-align: center;
     z-index: 20;
     color: var(--white);
+}
+
+.description{
+    position: relative;
+    transform: scale(0);
+    height: 50%;
+    padding: 1.5rem;
+    background-color: var(--lightGradient);
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: scale 1s ease;
+}
+
+.descriptionTextContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.descriptionText{
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.flexInline{
+    display: flex;
+    align-items: center;
+}
+
+.spaceBeetwen{
+    display: flex;
+    justify-content: space-between;
+}
+
+.minimize img{
+    position: relative;
+    height: 80px;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.minimize:hover img{
+    animation: minimize 1s none infinite alternate;
+}
+
+@keyframes minimize {
+    0%{
+        bottom: 0;
+    }
+
+    100%{
+        bottom: 20px;
+    }
+}
+
+.cardButton{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 100px;
+    margin-left: 1rem;
+    background: linear-gradient(145deg, var(--orangeLightGradient), var(--orangeShadowGradient));
+    box-shadow:  7px 7px 10px var(--shadow),
+    -7px -7px 10px var(--light);
+    border-radius: 20px;
+    border: solid 2px var(--darkBlue);
+    overflow: hidden;
+    color: var(--darkBlue);
+    cursor: pointer;
+}
+
+.cardButton::after{
+
+    background: linear-gradient(0deg, rgba(255,255,255,0) 1%, rgba(255,246,235,0.7) 50%, rgba(255,255,255,0) 99%);
+    content: "";
+    height: 150px;
+    left: -200%;
+    top: -50px;
+    opacity: .8;
+    position: absolute;
+    transform: rotate(-45deg);
+    width: 250px;
+    }
+    
+.cardButton:hover::after{
+    left: 120%;
+    transition: all ease 0.7s;
 }

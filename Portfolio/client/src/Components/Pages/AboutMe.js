@@ -3,7 +3,7 @@ import coffeeGIF from '../../Images/coffee-88.gif';
 import {Helmet} from 'react-helmet';
 import Skill from '../Skill';
 import Game from '../Game/Game';
-import photoSyl from '../../Images/photoSylvain.png'
+
 
 
 const AboutMe =()=>{
@@ -20,7 +20,6 @@ const AboutMe =()=>{
 
                     <p>Hi! I'm Sylvain Bousquet.</p>
                     <p>I'm a french <span className='importantText'>full-stack developer</span>, ready to take your project to the next level! If you're seeking a talented developer, I could be <span className='importantText'>the  perfect fit</span> for you.</p>
-                    <img src={photoSyl}></img>
                 
                 </div>
                 <img className='cover' src={coffeeGIF} alt='Coffee GIF'/>
