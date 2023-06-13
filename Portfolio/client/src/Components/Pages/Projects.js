@@ -2,7 +2,7 @@ import React,  { useEffect, useRef, useState } from 'react';
 import {Helmet} from 'react-helmet';
 import '../../../src/Projects.css';
 import fisherManInstrumentIMG from '../../Images/projects/FisherManSite.png';
-import img from '../../Images/projects/image.png';
+import chatGPTproject from '../../Images/projects/image.png';
 import img2 from '../../Images/projects/image2.png';
 import img3 from '../../Images/projects/image3.png';
 import htmlLogo from '../../Images/logos/html5.svg';
@@ -83,7 +83,7 @@ const Projects =()=>{
                         <div className='cardTitleContainer'>
 
                             <h1 className='cardTitle'>FISHERMAN'S INSTRUMENT</h1>
-                            <div className='cardText'>Built a website for french luthier Pascal Pecheur</div>
+                            <div className='cardText'>Website Development for French Luthier Pascal Pecheur</div>
 
                         </div>
 
@@ -95,8 +95,10 @@ const Projects =()=>{
                         <div className='descriptionTextContainer'>
                             <h1>Description :</h1>
                             <div className='descriptionText'>
-                                <p>This website as two parts: Front-office and Back-office. Pascal Pecheur asked me something he could changes at will, like adding you guitarre, changing price, adding a new article... </p>
-                                <p>He left me total liberty in term of UI/UX design, only two colors was necessary, one: a wood-like brown, two: a dark blue that would enhance his guitarres.</p>
+                                <p>This project involved building a website for Pascal Pecheur, a talented French luthier. The website consists of two main parts: the Front-office and the Back-office.</p>
+                                <p>In the Back-office, Pascal wanted the ability to make changes effortlessly, such as adding new guitars, updating prices, or creating new articles. I implemented a user-friendly content management system that allows him to have complete control over these aspects.</p>
+                                <p>For the UI/UX design, I had the freedom to exercise my creativity. Pascal Pecheur only specified two essential colors: a wood-like brown and a dark blue to accentuate his guitars. Taking this into consideration, my design aims to highlight the beauty and craftsmanship of his instruments.</p>
+                                
                             </div>
                         </div>
 
@@ -144,12 +146,12 @@ const Projects =()=>{
 
                         <div className='cardTitleContainer'>
 
-                            <h1 className='cardTitle'>FISHERMAN'S INSTRUMENT</h1>
-                            <div className='cardText'>Built a website for french luthier Pascal Pecheur</div>
+                            <h1 className='cardTitle'>ChatGPT Project</h1>
+                            <div className='cardText'>A personnal project utilizing  OpenAI API</div>
 
                         </div>
 
-                        <img src={img} className='cardCover' alt='apperçu du projet'></img>
+                        <img src={chatGPTproject} className='cardCover' alt='apperçu du projet'></img>
                     </div>
 
                     <div className='description'>
@@ -157,17 +159,18 @@ const Projects =()=>{
                         <div className='descriptionTextContainer'>
                             <h1>Description :</h1>
                             <div className='descriptionText'>
-                                <p>This website as two parts: Front-office and Back-office. Pascal Pecheur asked me something he could changes at will, like adding you guitarre, changing price, adding a new article... </p>
-                                <p>He left me total liberty in term of UI/UX design, only two colors was necessary, one: a wood-like brown, two: a dark blue that would enhance his guitarres.</p>
+                                <p>This project centers around utilizing the OpenAI API to generate responses using ChatGPT. By leveraging the power of OpenAI, I developed a system that allows users to interact with the ChatGPT model.</p>
+                                <p>With this project, users have the ability to personalize their responses by adjusting specific parameters. The goal was to create an interactive experience for users while exploring the capabilities of the OpenAI API.</p>
+                                <p>Driven by curiosity and a desire to understand the inner workings of the OpenAI API, I embarked on this project purely for the joy of learning.</p>
                             </div>
                         </div>
 
                         <div className='spaceBeetwen'>
                             <div className='flexInline'>
                                 <h3>Stack :</h3>
-                                <img src={phpLogo} className='cardLogo'></img>
-                                <img src={symfonyLogo} className='cardLogo'></img>
                                 <img src={jsLogo} className='cardLogo'></img>
+                                <img src={apiLogo} className='cardLogo'></img>
+                                <img src={reactLogo} className='cardLogo'></img>
                             </div>
 
                             <div className='minimize'  onClick={()=>minimize(card2Ref, "")}>
@@ -176,16 +179,15 @@ const Projects =()=>{
 
                             <div className='flexInline'>
                                 <h3>Visit project :</h3>
+                                                                
                                 <div className='playGameContainer'>
-                                    <button className='cardButton'>
-                                        <img src={wwwLogo} className='cardLogo'></img>
-                                    </button>
-                                </div>
-                                
-                                <div className='playGameContainer'>
-                                    <button className='cardButton'>
-                                        <img src={githubLogo} className='cardLogo'></img>
-                                    </button>
+
+                                    <a href='https://github.com/Sanbye/chatGPT-project' target='_blank'>
+                                        <button className='cardButton'>
+                                            <img src={githubLogo} className='cardLogo'></img>
+                                        </button>
+                                    </a>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -193,71 +195,15 @@ const Projects =()=>{
                     </div>
 
                 </div>
-                
+
                 <div className='projectCard smaller' ref={card3Ref} id='3'>
 
-                    <div className='imgContainer' onClick={()=>readMore(card3Ref, "3")}>
+                    <div className='imgContainer'onClick={()=>readMore(card3Ref, "3")}>
 
                         <div className='cardTitleContainer'>
 
-                            <h1 className='cardTitle'>FISHERMAN'S INSTRUMENT</h1>
-                            <div className='cardText'>Built a website for french luthier Pascal Pecheur</div>
-
-                        </div>
-
-                        <img src={img2} className='cardCover' alt='apperçu du projet'></img>
-                    </div>
-
-                    <div className='description'>
-
-                        <div className='descriptionTextContainer'>
-                            <h1>Description :</h1>
-                            <div className='descriptionText'>
-                                <p>This website as two parts: Front-office and Back-office. Pascal Pecheur asked me something he could changes at will, like adding you guitarre, changing price, adding a new article... </p>
-                                <p>He left me total liberty in term of UI/UX design, only two colors was necessary, one: a wood-like brown, two: a dark blue that would enhance his guitarres.</p>
-                            </div>
-                        </div>
-
-                        <div className='spaceBeetwen'>
-                            <div className='flexInline'>
-                                <h3>Stack :</h3>
-                                <img src={phpLogo} className='cardLogo'></img>
-                                <img src={symfonyLogo} className='cardLogo'></img>
-                                <img src={jsLogo} className='cardLogo'></img>
-                            </div>
-
-                            <div className='minimize'  onClick={()=>minimize(card3Ref, "")}>
-                                <img src={pushUPlogo} className='cardLogo'></img>
-                            </div>
-
-                            <div className='flexInline'>
-                                <h3>Visit project :</h3>
-                                <div className='playGameContainer'>
-                                    <button className='cardButton'>
-                                        <img src={wwwLogo} className='cardLogo'></img>
-                                    </button>
-                                </div>
-                                
-                                <div className='playGameContainer'>
-                                    <button className='cardButton'>
-                                        <img src={githubLogo} className='cardLogo'></img>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div className='projectCard bigger' ref={card4Ref} id='4'>
-
-                    <div className='imgContainer'onClick={()=>readMore(card4Ref, "4")}>
-
-                        <div className='cardTitleContainer'>
-
-                            <h1 className='cardTitle'>FISHERMAN'S INSTRUMENT</h1>
-                            <div className='cardText'>Built a website for french luthier Pascal Pecheur</div>
+                            <h1 className='cardTitle'>SortirApp</h1>
+                            <div className='cardText'>My first Symfony project</div>
 
                         </div>
 
@@ -269,8 +215,10 @@ const Projects =()=>{
                         <div className='descriptionTextContainer'>
                             <h1>Description :</h1>
                             <div className='descriptionText'>
-                                <p>This website as two parts: Front-office and Back-office. Pascal Pecheur asked me something he could changes at will, like adding you guitarre, changing price, adding a new article... </p>
-                                <p>He left me total liberty in term of UI/UX design, only two colors was necessary, one: a wood-like brown, two: a dark blue that would enhance his guitarres.</p>
+                                <p>This is my very first Symfony project as part of my web developer training.</p>
+                                <p>It was developed in collaboration with Erwan BELLANTAN and CHEN Max. The main objective of this project was to learn object-oriented programming (OOP) and database utilization. It's important to note that the front-end development was not the primary focus.</p>
+                                <p>Working with databases allowed us to understand and utilize the power of data storage and retrieval within the Symfony framework.</p>
+                                <p>SortirApp represents my first milestone in my journey as a web developer, marking my initial foray into Symfony and solidifying my understanding of back-end development principles.</p>
                             </div>
                         </div>
 
@@ -282,7 +230,62 @@ const Projects =()=>{
                                 <img src={jsLogo} className='cardLogo'></img>
                             </div>
 
-                            <div className='minimize'  onClick={()=>minimize(card4Ref, "bigger")}>
+                            <div className='minimize'  onClick={()=>minimize(card3Ref, "bigger")}>
+                                <img src={pushUPlogo} className='cardLogo'></img>
+                            </div>
+
+                            <div className='flexInline'>
+                                <h3>Visit project :</h3>
+                                
+                                <div className='playGameContainer'>
+                                    <a href='https://github.com/Sanbye/sortirApp' target='_blank'>
+                                        <button className='cardButton'>
+                                            <img src={githubLogo} className='cardLogo'></img>
+                                         </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                
+                <div className='projectCard bigger' ref={card4Ref} id='4'>
+
+                    <div className='imgContainer' onClick={()=>readMore(card4Ref, "4")}>
+
+                        <div className='cardTitleContainer'>
+
+                            <h1 className='cardTitle'>My personnal Portfolio</h1>
+                            <div className='cardText'>The website you are currently on</div>
+
+                        </div>
+
+                        <img src={img2} className='cardCover' alt='apperçu du projet'></img>
+                    </div>
+
+                    <div className='description'>
+
+                        <div className='descriptionTextContainer'>
+                            <h1>Description :</h1>
+                            <div className='descriptionText'>
+                                <p>This project showcases my personal portfolio website, the very website you are currently visiting. It serves as a platform to present my skills, projects, and experiences to potential clients and employers.</p>
+                                <p>If you're interested in exploring the code behind this website, you can find it on my GitHub repository. Feel free to browse through the code and gain insights into the implementation details.</p>
+                                <p>In addition to providing information about my work, skills, and accomplishments, my portfolio also features a fun little game that you can play. </p>
+                                <p> Give it a try and discover a surprise awaiting those who triumph in the game !</p>
+                            </div>
+                        </div>
+
+                        <div className='spaceBeetwen'>
+                            <div className='flexInline'>
+                                <h3>Stack :</h3>
+                                <img src={jsLogo} className='cardLogo'></img>
+                                <img src={reactLogo} className='cardLogo'></img>
+                                <img src={cssLogo} className='cardLogo'></img>
+                            </div>
+
+                            <div className='minimize'  onClick={()=>minimize(card4Ref, "")}>
                                 <img src={pushUPlogo} className='cardLogo'></img>
                             </div>
 
@@ -295,9 +298,12 @@ const Projects =()=>{
                                 </div>
                                 
                                 <div className='playGameContainer'>
-                                    <button className='cardButton'>
-                                        <img src={githubLogo} className='cardLogo'></img>
-                                    </button>
+
+                                    <a href='https://github.com/Sanbye/portfolio/tree/master/Portfolio/client' target='_blank'>
+                                        <button className='cardButton'>
+                                            <img src={githubLogo} className='cardLogo'></img>
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -305,6 +311,7 @@ const Projects =()=>{
                     </div>
 
                 </div>
+
             </div>
 
         </>
