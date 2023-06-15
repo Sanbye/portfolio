@@ -1,0 +1,104 @@
+
+.contactContainer{
+    padding-top: 15vh;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+.sylvImg{
+    flex: 1 2 300px;
+}
+
+.formContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 3 1;
+    height: 100vh;
+}
+
+#contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 10vh;
+    height: 85%;
+    width: 60%;
+    padding: 0 2rem 0 2rem;
+    box-shadow:  8px 6px 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--shadow);
+    border-radius: 20px;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70%;
+}
+
+.form-group input{
+    height: 3rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #d2e1dc;
+}
+
+.form-group .textArea{
+    height: 50%;
+    position: relative;
+}
+
+.form-group textArea{
+    height: 100%;
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    resize: none;
+    border: none;
+    outline: none;
+    background: #d2e1dc;
+}
+
+.focused + .customPlaceholder{
+    top: -1.5rem;
+    border-color: var(--shadow);
+}
+
+.form-group input:focus, textarea:focus{
+    outline: solid 2px var(--shadow);;
+}
+
+.customPlaceholder{
+    position: absolute;
+    padding: 0.2rem;
+    top: 1.5rem;
+    left: 1.5rem;
+    font-size: 1.5rem;
+    background: #d2e1dc;
+    border-radius: 10px;
+    border: 2px solid;
+    border-color: transparent;
+    transition: all 1s ease;
+}
+
+.contactBtn{
+    position: relative;
+    background: linear-gradient(145deg, var(--orangeLightGradient), var(--orangeShadowGradient));
+    box-shadow:  7px 7px 10px var(--shadow),
+    -7px -7px 10px var(--light);
+    width: 150px;
+    height: 3rem;
+    border: solid 2px var(--darkBlue);
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+    transition: box-shadow 0.8s ease;
+}

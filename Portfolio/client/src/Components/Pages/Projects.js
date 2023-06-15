@@ -1,6 +1,6 @@
 import React,  { useEffect, useRef, useState } from 'react';
 import {Helmet} from 'react-helmet';
-import '../../../src/Projects.css';
+import '../../../src/css/projects.css';
 import fisherManInstrumentIMG from '../../Images/projects/FisherManSite.png';
 import chatGPTproject from '../../Images/projects/image.png';
 import img2 from '../../Images/projects/image2.png';
@@ -74,7 +74,7 @@ const Projects =()=>{
                 <title>Projects</title>
             </Helmet>
 
-            <div className='projectsContainer'>
+            <section className='projectsContainer'>
 
                 <div className='projectCard bigger' ref={card1Ref} id="1">
 
@@ -312,7 +312,7 @@ const Projects =()=>{
 
                 </div>
 
-            </div>
+            </section>
 
         </>
     )

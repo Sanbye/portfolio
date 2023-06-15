@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../../../src/Game.css'
+import '../../../src/css/game.css'
 import music from '../../sounds/ReadyToPlaybyAlexeyAnisimov.mp3';
 import gameOver from '../../sounds/gameOver.wav';
 import winSound from '../../sounds/win.wav';

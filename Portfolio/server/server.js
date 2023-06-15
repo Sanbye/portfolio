@@ -25,10 +25,11 @@ transporter.verify((error, success) => {
   }
 });
 router.post('/', (req, res, next) => {
-  var name = req.body.name
+  var firstName = req.body.firstName
+  var lastName = req.body.lastName
   var email = req.body.email
   var message = req.body.message
-  var content = `name: ${name} \n email: ${email} \n message: ${message} `
+  var content = `First name: ${firstName}\n Last name: ${lastName} \n Email: ${email} \n Message: \n ${message} `
   var mail = {
     from: '6lv1boo@gmail.com',
     to: '6lv1boo@gmail.com', 
