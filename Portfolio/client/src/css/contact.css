@@ -102,3 +102,21 @@
     overflow: hidden;
     transition: box-shadow 0.8s ease;
 }
+
+.contactBtn::after{
+
+    background: linear-gradient(0deg, rgba(255,255,255,0) 1%, rgba(255,246,235,0.7) 50%, rgba(255,255,255,0) 99%);
+    content: "";
+    height: 150px;
+    left: -200%;
+    top: -50px;
+    opacity: .8;
+    position: absolute;
+    transform: rotate(-45deg);
+    width: 250px;
+    }
+    
+.contactBtn:hover::after{
+    left: 120%;
+    transition: all ease 0.7s;
+}

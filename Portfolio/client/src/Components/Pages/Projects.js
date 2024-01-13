@@ -5,18 +5,15 @@ import fisherManInstrumentIMG from '../../Images/projects/FisherManSite.png';
 import chatGPTproject from '../../Images/projects/image.png';
 import img2 from '../../Images/projects/image2.png';
 import img3 from '../../Images/projects/image3.png';
-import htmlLogo from '../../Images/logos/html5.svg';
 import cssLogo from '../../Images/logos/css3.svg';
 import jsLogo from '../../Images/logos/js.svg';
+import nodeLogo from '../../Images/logos/node.svg';
 import reactLogo from '../../Images/logos/react.svg';
-import gitLogo from '../../Images/logos/git.svg';
 import githubLogo from '../../Images/logos/github.svg';
-import wordpressLogo from '../../Images/logos/wordpress.svg';
 import phpLogo from '../../Images/logos/php.svg';
 import symfonyLogo from '../../Images/logos/symfony.svg';
 import wwwLogo from '../../Images/logos/www.svg'
 import apiLogo from '../../Images/logos/api.svg';
-import close from '../../Images/svg/close.svg'
 import pushUPlogo from '../../Images/svg/pushUP.svg';
 
 const Projects =()=>{
@@ -171,6 +168,7 @@ const Projects =()=>{
                                 <img src={jsLogo} className='cardLogo'></img>
                                 <img src={apiLogo} className='cardLogo'></img>
                                 <img src={reactLogo} className='cardLogo'></img>
+                                <img src={nodeLogo} className='cardLogo'></img>
                             </div>
 
                             <div className='minimize'  onClick={()=>minimize(card2Ref, "")}>
@@ -227,7 +225,6 @@ const Projects =()=>{
                                 <h3>Stack :</h3>
                                 <img src={phpLogo} className='cardLogo'></img>
                                 <img src={symfonyLogo} className='cardLogo'></img>
-                                <img src={jsLogo} className='cardLogo'></img>
                             </div>
 
                             <div className='minimize'  onClick={()=>minimize(card3Ref, "bigger")}>
@@ -282,7 +279,7 @@ const Projects =()=>{
                                 <h3>Stack :</h3>
                                 <img src={jsLogo} className='cardLogo'></img>
                                 <img src={reactLogo} className='cardLogo'></img>
-                                <img src={cssLogo} className='cardLogo'></img>
+                                <img src={nodeLogo} className='cardLogo'></img>
                             </div>
 
                             <div className='minimize'  onClick={()=>minimize(card4Ref, "")}>
@@ -291,11 +288,6 @@ const Projects =()=>{
 
                             <div className='flexInline'>
                                 <h3>Visit project :</h3>
-                                <div className='playGameContainer'>
-                                    <button className='cardButton'>
-                                        <img src={wwwLogo} className='cardLogo'></img>
-                                    </button>
-                                </div>
                                 
                                 <div className='playGameContainer'>
 

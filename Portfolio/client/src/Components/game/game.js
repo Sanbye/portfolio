@@ -8,7 +8,7 @@ import cssLogo from '../../Images/logos/css3.svg';
 import jsLogo from '../../Images/logos/js.svg';
 import reactLogo from '../../Images/logos/react.svg';
 import gitLogo from '../../Images/logos/git.svg';
-import githubLogo from '../../Images/logos/github.svg';
+import nodeLogo from '../../Images/logos/node.svg';
 import wordpressLogo from '../../Images/logos/wordpress.svg';
 import phpLogo from '../../Images/logos/php.svg';
 import symfonyLogo from '../../Images/logos/symfony.svg';
@@ -46,7 +46,7 @@ const Game = () => {
     phpLogo,
     symfonyLogo,
     gitLogo,
-    githubLogo,
+    nodeLogo,
     apiLogo,
     wordpressLogo,
   ];
@@ -59,7 +59,7 @@ const Game = () => {
     'PHP',
     'Symfony',
     'GIT',
-    'GitHub',
+    'Node.JS',
     'RESTful API',
     'WordPress',
   ];
