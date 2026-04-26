@@ -5,7 +5,6 @@ import gameOver from '../../sounds/gameOver.wav';
 import winSound from '../../sounds/win.wav';
 import tsLogo from '../../Images/logos/TypeScript.svg';
 import reactLogo from '../../Images/logos/react.svg';
-import gitLogo from '../../Images/logos/git.svg';
 import phpLogo from '../../Images/logos/php.svg';
 import symfonyLogo from '../../Images/logos/symfony.svg';
 import apiLogo from '../../Images/logos/api.svg';
