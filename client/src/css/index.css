@@ -1,0 +1,631 @@
+:root{
+  --darkBlue: #284763;
+  --lightBlue: #a1cac8;
+  --shadow: #89acaa;
+  --light: #b9e8e6;
+  --shadowGradient: #91b6b4;
+  --lightGradient: #acd8d6;
+  --orange: #d96511;
+  --orangeShadowGradient: #c35b0f;
+  --orangeLightGradient: #ff994f;
+  --white: #FFFDFA;
+  --timelineItemHeight: 15px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: #284763;
+}
+
+body{
+  background-color: var(--lightBlue);
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+}
+
+h1{
+  font-size: 3rem;
+}
+
+.importantText{
+  color:  var(--orange);
+  font-size: larger;
+}
+
+a, a:visited {
+  color:var(--white);
+  text-decoration: none;
+}
+
+.header {
+  list-style: none;
+  background-color: var(--darkBlue);
+  height: 5rem;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+  z-index: 100;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+header ul {
+  display: flex;
+  height: 100%;
+    align-items: center;
+}
+
+.header p {
+  color: var(--white);
+}
+
+.my-face {
+    height: 6vh;
+    width: 6vh;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+}
+
+.header li{
+  display: flex;
+  justify-content: space-around;
+}
+
+.header a{
+  position: relative;
+}
+
+.header a:hover, .header .active{
+  color: var(--lightBlue);
+}
+
+.header a::after{
+  transform: translateY(10px);
+  transition: all 1s cubic-bezier(.39,.86,.76,.81);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.2rem;
+  bottom: 0;
+  left: 0;
+}
+
+.nav-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--darkBlue);
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem 0;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  z-index: 200;
+}
+
+.dropdown-menu a {
+  padding: 0.6rem 1.4rem;
+  font-size: 1.4rem;
+  white-space: nowrap;
+  color: var(--white);
+}
+
+.dropdown-menu a:hover {
+  background-color: rgba(161, 202, 200, 0.15);
+  color: var(--lightBlue);
+}
+
+.dropdown-menu a::after {
+  display: none;
+}
+
+.header a:hover::after, .header .active::after{
+  transform: translateY(2px);
+  transition: all 1s cubic-bezier(.39,.86,.76,.81);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.2rem;
+  bottom: 0;
+  left: 0;
+  background-color: var(--lightBlue);
+}
+
+.heroBanner{
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cover{
+  object-fit: contain;
+  height: auto;
+  width: 30vw;
+  position: absolute;
+  z-index: -10;
+  right: 5%;
+  top: 40%;
+}
+
+.heroBanner div{
+  position: absolute;
+  left: 5%;
+  top: 25%;
+  width: 60%;
+  font-size: 2rem;
+}
+
+.skillSection{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--lightBlue);
+}
+
+.howIwork{
+  width: 50%;
+  font-size: 2rem;
+  padding: 0 2rem 0 10%;
+}
+
+.techStack{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.myToolBox {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.logos{
+  display: flex;
+  justify-content: center;
+  height: 60%;
+  width: 80%;
+  flex-wrap: wrap;
+}
+
+.logoContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow:  7px 7px 10px var(--shadow),
+               -7px -7px 10px var(--light);
+}
+
+.logoContainer p{
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.logo{
+  height: 5vh;
+  width: 5vw;
+}
+
+.monParcourContainer {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 10px 1fr;
+}
+
+.monParcourLeft {
+    grid-column: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Diplômes positionnés précisément selon les dates d'obtention */
+/* Timeline : Jan 2022 (index 0) - Juil 2026 (index 110) - 1 mois = 2 carrés */
+/* Les boxes sont centrées sur leur date avec transform: translateY(-50%) */
+/* Janvier 2023 = index 24 (12 mois × 2)+1 - Couleur BLEUE */
+.diplome-jan2023 {
+    position: absolute;
+    top: calc(85 * var(--timelineItemHeight, 15px));
+    transform: translateY(-50%);
+    border: 3px solid #4a90e2;
+}
+
+.diplome-aout2024 {
+    position: absolute;
+    top: calc(48 * var(--timelineItemHeight, 15px));
+    transform: translateY(-50%);
+    border: 3px solid #4a90e2;
+}
+
+.diplome-juil2026 {
+    position: absolute;
+    top: calc(1 * var(--timelineItemHeight, 15px));
+    transform: translateY(-50%);
+    border: 3px solid #4a90e2;
+}
+
+.boxRight::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    width: 105px;
+    height: 6px;
+    background-color: var(--darkBlue);
+    transform: translateY(-50%);
+    z-index: 0;
+    animation: drawLineFromRight 1ms linear both;
+    animation-timeline: view();
+    animation-range: 10% 20%;
+}
+
+/* Couleurs des traits selon les diplômes */
+.diplome-jan2023::before {
+    background-color: #4a90e2;
+}
+
+.diplome-aout2024::before {
+    background-color: #4a90e2;
+}
+
+.diplome-juil2026::before {
+    background-color: #4a90e2;
+}
+
+/* Le background de la box dans ::after pour être au-dessus du trait */
+.boxRight::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--white);
+  border-radius: 6px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.boxRight > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes drawLineFromRight {
+    from {
+        left: 0px;
+    }
+    to {
+        left: -105px;
+    }
+}
+
+.monParcourMiddle {
+    grid-column: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.timelineItem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.yearLabel {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--darkBlue);
+    border: 3px solid var(--darkBlue);
+    z-index: 50;
+    white-space: nowrap;
+    min-width: 70px;
+    text-align: center;
+}
+
+.monParcourRight {
+    grid-column: 3;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.marginBottom3 {
+    margin-bottom: 3rem;
+}
+
+.miniBoxLeft {
+    height: 7.5px;
+    width: 7.5px;
+    background-color: #284763;
+    z-index: 2;
+    animation: miniMoveToRight 1ms linear both;
+    animation-timeline: view();
+    animation-range: contain 0% contain 5%;
+}
+
+
+
+@keyframes miniMoveToRight {
+    from { transform: translateX(-50px); opacity: 0;}
+    to { transform: translateX(0); opacity: 1;}
+}
+
+.boxLeft {
+    width: 400px;
+    padding: 15px;
+    margin-bottom: 150px;
+    border: 3px solid #284763;
+    border-radius: 6px;
+    background-color: var(--white);
+    animation: moveToRight 1ms linear both;
+    animation-timeline: view();
+    animation-range: 0% 20%;
+}
+
+/* Expériences positionnées au milieu de leur période */
+/* Timeline : Jan 2022 (index 0) - Juil 2026 (index 110) - 1 mois = 2 carrés */
+/* Nov 2022 - Jan 2023 : Nov 2022 = index 20, Jan 2023 = 24 */
+.experience-nov2022 {
+    position: absolute;
+    top: calc(100 * var(--timelineItemHeight, 15px));
+    transform: translateY(-50%);
+    border-color: #4a90e2;
+}
+
+.experience-mai2023 {
+    position: absolute;
+    top: calc(78 * var(--timelineItemHeight, 15px));
+    transform: translateY(-50%);
+    border-color: #4a90e2;
+}
+
+.experience-juil2023 {
+    position: absolute;
+    top: calc(26 * var(--timelineItemHeight, 15px));
+    transform: translateY(-50%);
+    border-color: #4a90e2;
+}
+
+.boxLeft h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--darkBlue);
+}
+
+.boxLeft p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+.boxLeft a {
+    color: var(--orange);
+    text-decoration: underline;
+}
+
+.boxRight a {
+    color: #7c5cbf;
+    text-decoration: underline;
+}
+
+.boxLeft .diplome {
+    font-weight: bold;
+    color: var(--orange);
+}
+
+@keyframes moveToRight {
+    from {
+        right: 400px;
+        opacity: 0;
+    }
+    to {
+        right: 100px;
+        opacity: 1;
+    }
+}
+
+.miniBoxRight {
+    height: 7.5px;
+    width: 7.5px;
+    background-color: #284763;
+    position: relative;
+    z-index: 2;
+    animation: miniMoveToLeft 1ms linear both;
+    animation-timeline: view();
+    animation-range: contain 0% contain 5%;
+}
+
+.period-1-color {
+    background-color: #4a90e2;
+}
+
+.period-2-color {
+    background-color: #4a90e2;
+}
+
+@keyframes miniMoveToLeft {
+    from { transform: translateX(50px); opacity: 0}
+    to { transform: translateX(0); opacity: 1;}
+}
+
+.boxRight {
+  position: absolute;
+  z-index: 10;
+  width: 400px;
+  padding: 15px;
+  border-radius: 6px;
+  background-color: var(--white);
+  animation: moveToLeft 1ms linear both;
+  animation-timeline: view();
+  animation-range: 0% 20%;
+}
+
+.boxRight.period-1 {
+    border-color: #4a90e2;
+}
+
+.boxRight.period-2 {
+    border-color: #4a90e2;
+}
+
+.boxRight h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--darkBlue);
+}
+
+.boxRight p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+.experienceList {
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.experienceList li {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.parcourHeader {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.titre {
+    flex: 1;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--darkBlue);
+}
+
+.parcourBadge {
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--white);
+    white-space: nowrap;
+}
+
+.badge-experience {
+    background-color: var(--orange);
+}
+
+.badge-diplome {
+    background-color: #7c5cbf;
+}
+
+.boxLeft p.date,
+.boxRight p.date {
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
+@keyframes moveToLeft {
+    from {
+        left: 400px;
+        opacity: 0;
+    }
+    to {
+        left: 100px;
+        opacity: 1;
+    }
+}
+
+.presentationSection {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 10rem 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.presentationSection h1 {
+    font-size: 2.4rem;
+    color: var(--darkBlue);
+    margin-bottom: 0.5rem;
+}
+
+.presentationSection h2 {
+    font-size: 1.7rem;
+    color: var(--darkBlue);
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.presentationSection p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--darkBlue);
+}
+
+.presentationDivider {
+    border: none;
+    border-top: 2px solid var(--shadow);
+    margin: 1rem 0;
+}
+
+.presentationList {
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    list-style-type: disc;
+}
+
+.presentationList li {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--darkBlue);
+}
