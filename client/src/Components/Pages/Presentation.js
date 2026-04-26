@@ -152,8 +152,8 @@ const Presentation = () => {
                 <h2>Mes principales qualités humaines</h2>
                 <p>
                     L'<strong>autonomie</strong>, la <strong>persévérance</strong>, la{' '}
-                    <strong>communication</strong>, la <strong>capacité d'adaptation</strong> et la{' '}
-                    <strong>polyvalence</strong> sont des qualités que j'ai développées et que je mobilise au quotidien.
+                    <strong>communication</strong>, la <strong>capacité d'adaptation</strong>, la{' '}
+                    <strong>polyvalence</strong> et la <strong>curiosité</strong> sont des qualités que j'ai développées et que je mobilise au quotidien.
                 </p>
                 <ul className="presentationList">
                     <li>
@@ -178,6 +178,11 @@ const Presentation = () => {
                         <strong>La capacité d'adaptation</strong>, associée à ma <strong>polyvalence</strong>, me permet
                         de m'intégrer rapidement à de nouveaux projets ou environnements techniques et d'intervenir sur
                         des sujets variés selon les besoins spécifiques de chaque projet.
+                    </li>
+                    <li>
+                        <strong>La curiosité</strong> est un moteur essentiel dans mon apprentissage continu : elle me
+                        pousse à explorer de nouvelles technologies, à comprendre le fonctionnement des outils que
+                        j'utilise en profondeur et à rester à l'affût des évolutions du domaine.
                     </li>
                 </ul>
 

@@ -1,6 +1,5 @@
 import chatGPTproject from '../../Images/projects/image.png';
 import jsLogo from '../../Images/logos/js.svg';
-import apiLogo from '../../Images/logos/api.svg';
 import reactLogo from '../../Images/logos/react.svg';
 import nodeLogo from '../../Images/logos/node.svg';
 import githubLogo from '../../Images/logos/github.svg';
